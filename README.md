@@ -21,6 +21,10 @@ vi conf/local.conf
 # before building. Refer to meta-ccc/conf/machine for a list of values 
 # (e.g. "miami-ccc").
 
+# Edit fpga-image-wizard.bb to upload the desired bitstream and export location for hardware design.
+vi ../meta-ccc/recipes-bsp/fpga/fpga-image-wizard.bb
+
+
 # Then build your first image and relax a bit:
 source profile
 nice bitbake my-image
