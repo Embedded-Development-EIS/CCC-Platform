@@ -74,7 +74,7 @@ The `install-to-sd...` scripts copy the required files to the card. You'll
 have to run these scripts as root, as they require low-level access to
 the SD card.
 
-To boot a Miami-Florida board, insert the SD card into the slot, set the
+To boot a Miami-CCC board, insert the SD card into the slot, set the
 jumpers on the miami to boot from SD (01010110) and switch on the power
 supply.
 
@@ -88,4 +88,4 @@ This started as a fork of Ballister's OE environment for Zynq boards.
 
 # Contact
 
-e.i.s electronics
+E.I.S Electronics
