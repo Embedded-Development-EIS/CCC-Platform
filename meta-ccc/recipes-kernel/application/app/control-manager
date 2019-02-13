@@ -1,0 +1,34 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Author:            soumya
+# Required-Start:    controller service
+# Required-Stop:     controller service
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start daemon at boot time
+# Description:       Enable service provided by daemon.
+### END INIT INFO
+
+case "$1" in
+  start)
+    echo "Starting controller service."
+    insmod /lib/modules/adc.ko
+    insmod /lib/modules/controller.ko
+    insmod /lib/modules/pwm_1.ko
+    insmod /lib/modules/serial.ko
+    nice -n -15 /bin/ctrlapp.elf -daemon -e -ir -leak -dors -rx -tx 
+    ;;
+  stop)
+    echo "Stopping controller service."
+    rmmod adc
+    rmod controller
+    rmod pwm_1
+    rmod serial
+    ;
+  *)
+    echo "Usage: service controller-manager {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0
