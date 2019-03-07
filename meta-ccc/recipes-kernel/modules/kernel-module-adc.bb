@@ -1,4 +1,4 @@
-SUMMARY = "Kernel driver module to generate pwm signal"
+SUMMARY = "Kernel driver module for adc through spi"
 require kernel-module-eis.inc
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=8264535c0c4e9c6c335635c4026a8022"
